@@ -41,10 +41,10 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
         """ Gets data from indexed dataset"""
-        assert index is not None and index >= 0
-        assert index <= len(self.dataset())
-
         data = self.indexed_dataset()
+        assert index is not None and index >= 0
+        assert index <= max(data.keys())
+
         page = []
         count = 0
         next_index = None
