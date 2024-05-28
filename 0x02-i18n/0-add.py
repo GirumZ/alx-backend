@@ -11,7 +11,9 @@ app.url_map_strict_slashes = False
 
 @app.route('/')
 def index() -> str:
-    """Index route"""
+    """
+    A route for the index page
+    """
     return render_template('0-index.html')
 
 
