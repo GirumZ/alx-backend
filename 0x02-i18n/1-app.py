@@ -2,7 +2,7 @@
 """Basic flask app
 """
 from flask import Flask, render_template
-from flask_babel import Bable
+from flask_babel import Babel
 
 
 class Config:
