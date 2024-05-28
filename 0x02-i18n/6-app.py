@@ -54,7 +54,7 @@ def get_locale() -> str:
     user = request.args.get("login_as")
     if user:
         lang = users.get(int(user)).get('locale')
-        if lang in app.config['LANGUAGE']:
+        if lang in app.config['LANGUAGES']:
             return lang
     headers = request.headers.get("locale")
     if headers:
